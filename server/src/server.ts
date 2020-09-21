@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+import {errors} from 'celebrate'
+
 import routes from './routes';
 
 const app = express();
@@ -8,7 +10,9 @@ const app = express();
 app
   .use(cors())
   .use(express.json())
-  .use(routes);
+  .use(routes)
+  .use(errors())
+;
 
 app.use('/uploads', express.static(
   path.resolve(__dirname, '..', 'uploads'),

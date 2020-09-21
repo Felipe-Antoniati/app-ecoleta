@@ -1,12 +1,8 @@
-# ♻️ Ecoleta - Coleta Seletiva Solidária
+#  Ecoleta - Coleta Seletiva Solidária
 
 <div align="center"> 
 	<img  src="./client/web/src/assets/images/logo.svg">
 </div>
-
-<div align="center">
-</div>
-
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
@@ -19,9 +15,9 @@
 
 ##  Sobre o projeto
 
-Aplicativo para cadastrar pontos de **Coleta Seletiva Solidária** de resíduos orgânicos e inorgânicos; Esse cadastro é feito através do APP Web, e as pessoas podem buscar os pontos de coletas disponíveis através do APP Mobile.
+♻️ ECOLETA é um Aplicativo para cadastrar Pontos de **Coleta Seletiva Solidária** de resíduos orgânicos e inorgânicos; Esse cadastro é feito através do **APP Web**, e as pessoas podem buscar os pontos de coletas disponíveis através do **APP Mobile**.
 
-Este Projeto foi desenvolvido durante à **NLW 2** (Next Level Week 2) um evento oferecido pela [Rocketseat](https://blog.rocketseat.com.br/primeira-next-level-week/). À **NLW** é um curso intensivo online e gratuito, com muito código, desafios, networking e um único objetivo: te levar para o próximo nível.
+Este Projeto foi desenvolvido durante à **NLW 1** (Next Level Week 1) um evento oferecido pela [Rocketseat](https://blog.rocketseat.com.br/primeira-next-level-week/). À **NLW** é um curso intensivo online e gratuito, com muito código, desafios, networking e um único objetivo: te levar para o próximo nível.
 
 O conteúdo é exibido durante 1 semana, e em cada dia da semana, é apresentado uma etapa para o desenvolvimento do projeto, desde o **Back-end** com a construção de uma **API REST**, até o **Front-end Web** e **Front-end Mobile**, utilizando as melhores tecnologias do mercado.
 
@@ -36,15 +32,16 @@ O conteúdo é exibido durante 1 semana, e em cada dia da semana, é apresentado
 
 ## ⚙️ Funcionalidades
 
-- [x] As entidades tem acesso ao aplicativo Web, onde podem: 
+- [x] As Entidades tem acesso ao **Aplicativo Web**, onde podem: 
   - [x] Cadastrar-se na plataforma enviando:
     - [x] Nome, Email e Whatsapp.
     - [x] Cidade, Estado(UF).
     - [x] Selecionando Ponto de Coleta específico no mapa.
     - [x] Selecionando Ítens disponíveis para Coleta
 
-- [x] As pessoas tem acesso ao aplicativo Mobile, onde podem:
-  - [x] Selecionar a Cidade e o Estado para encontrar Pontos de Coleta.
+- [x] As pessoas tem acesso ao **Aplicativo Mobile**, onde podem:
+ - [x] Selecionar a Cidade e o Estado para encontrar Pontos de Coleta.
+ - [x] Entrar em contato com a Entidade que cadastrou o Ponto de Coleta.
 
 ---
 
@@ -118,7 +115,7 @@ $ npm install
 # Rode a aplicação
 $ npm start
 
-Depois leia o QRCode com o app do EXPO ou rode em um emulador.
+> Depois leia o QRCode com o app do EXPO ou rode em um emulador.
 
 ```
 
@@ -131,9 +128,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 #### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
 
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
--   **[Axios](https://github.com/axios/axios)**
 -   **[LeafletJS](https://leafletjs.com/)**
 -   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[Axios](https://github.com/axios/axios)**
+-   **[React DropZone](https://react-dropzone.js.org/)**
 
 > Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json)
 
@@ -144,6 +142,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[KnexJS](http://knexjs.org/)**
 -   **[SQLite3](https://github.com/mapbox/node-sqlite3)**
 -   **[ts-node](https://github.com/TypeStrong/ts-node)**
+-   **[Celebrate](https://github.com/arb/celebrate)**
+-   **[Multer](https://github.com/expressjs/multer)**
 
 > Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json)
 
@@ -151,7 +151,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 -   **[Expo](https://expo.io/)**
 -   **[Expo Google Fonts](https://github.com/expo/google-fonts)**
+-   **[Expo Mail Composer](https://docs.expo.io/versions/latest/sdk/mail-composer/)**
 -   **[React Navigation](https://reactnavigation.org/)**
+-   **[React Native Maps](https://github.com/react-native-community/react-native-maps)**
 -   **[Axios](https://github.com/axios/axios)**
 
 > Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/mobile/package.json)
@@ -189,7 +191,7 @@ Este projeto esta sobe a licença [MIT](./LICENSE).
 
 ##  Versões do README
 
-[Português 🇧🇷](./README.md)  |  [Inglês sem emojis 🇺🇸](./README-en.md) 
+[Português 🇧🇷](./README.md)  
 
 
 De uma ⭐️ neste Projeto, para liberar a dopamina!

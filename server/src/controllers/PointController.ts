@@ -11,24 +11,29 @@ class PointController {
     
     const trx = await knex.transaction();
     
-    const insertedIds = await trx('points').insert({
-      image: 'https://images.unsplash.com/photo-1556767576-5ec41e3239ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
+    const point = {
+      image: req.file.filename,
       name, 
       email, 
       whatsapp, 
       latitude, 
       longitude, 
       city, 
-      uf, 
-    });
+      uf,
+    }
+
+    const insertedIds = await trx('points').insert(point);
   
     const point_id = insertedIds[0]
     
-    const pointItems = items.map((item_id: number) => {
-      return {
-        item_id,
-        point_id
-      }
+    const pointItems = items
+      .split(',')
+      .map((item: string) => Number(item.trim()))
+      .map((item_id: number) => {
+        return {
+          item_id,
+          point_id
+        }
     });
     
     await trx('point_items').insert(pointItems);
@@ -36,7 +41,8 @@ class PointController {
     await trx.commit();
     
     return res.status(201).json({
-      success: "Collection Point Created!"
+      success: "Collection Point Created!",
+      point: point, 
     });
     
   };
@@ -51,42 +57,48 @@ class PointController {
 
     const points = await knex ('points')
       .join('point_items', 'points.id', '=', 'point_items.point_id')
-      .whereIn('point_Items.item_id', parsedItems)
+      .whereIn('point_items.item_id', parsedItems)
       .where('city', String(city))
       .where('uf', String(uf))
       .distinct()
       .select('points.*')
     ;
     
-    return res.json(points);
+    const serializedPoints = points.map( point => {
+      return {
+        ...point,
+        image_url: `http://192.168.15.8:5000/uploads/${point.image}`,
+      };
+    })
+    return res.json(serializedPoints);
   };
 
   async show(req: Request, res: Response) {
-    
-    const {id} = req.params;
+    const { id } = req.params;
 
-    const point = knex('points')
+    const point = await knex('points')
       .where('id', id)
       .first()
     ;
 
     if (!point) {
-      return res.json({
-        message: "Point Not Found."
+      return res.status(400).json({ 
+        message: 'Point not found.' 
       });
+    }
+
+    const serializedPoint = {
+      ...point,
+      image_url: `http://192.168.15.8:5000/uploads/${point.image}`,
     };
 
-    const items = knex('items')
-      .join('point_items', 'items.id', '=', 'point_items.items_id')
+    const items = await knex('items')
+      .join('point_items', 'items.id', '=', 'point_items.item_id')
       .where('point_items.point_id', id)
-      .select('items.title')
-    ;
+      .select('items.title');
 
-    return res.json( {
-      point, items
-    });
-
-  };
+    return res.json({ point: serializedPoint, items });
+  }
 
 };
 
