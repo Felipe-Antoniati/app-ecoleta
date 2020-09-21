@@ -40,8 +40,8 @@ O conteúdo é exibido durante 1 semana, e em cada dia da semana, é apresentado
     - [x] Selecionando Ítens disponíveis para Coleta
 
 - [x] As pessoas tem acesso ao **Aplicativo Mobile**, onde podem:
- - [x] Selecionar a Cidade e o Estado para encontrar Pontos de Coleta.
- - [x] Entrar em contato com a Entidade que cadastrou o Ponto de Coleta.
+  - [x] Selecionar a Cidade e o Estado para encontrar Pontos de Coleta.
+  - [x] Entrar em contato com a Entidade que cadastrou o Ponto de Coleta.
 
 ---
 
@@ -104,7 +104,8 @@ $ npm start
 #### 📱 Iniciar APlicação Mobile
 
 ``` bash
-Para rodar o projeto mobile você precisa de um celular com o EXPO instalado, ou um emulador android/ios.
+Para rodar o projeto mobile você precisa de um celular com o EXPO instalado, 
+ou um emulador android/ios.
 
 # Vá para a pasta mobile da aplicação
 $ cd app-ecoleta/client/mobile
