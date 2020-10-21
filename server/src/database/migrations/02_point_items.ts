@@ -1,27 +1,24 @@
-import Knex from 'knex';
+import Knex from "knex";
 
 export async function up(knex: Knex) {
-  return knex.schema.createTable('point_items', table => {
-    
-    table.increments('id').notNullable();
-    
-    table
-      .integer('point_id')
+  return knex.schema.createTable("point_items", (table) => {
+    table.increments("id").notNullable();
+
+    table.integer("point_id")
       .notNullable()
-      .references('id')
-      .inTable('points')
-    ;   
+      .references("id")
+      .inTable("points")
+    ;
 
     table
-      .integer('item_id')
+      .integer("item_id")
       .notNullable()
-      .references('id')
-      .inTable('items')
+      .references("id")
+      .inTable("items")
     ;
-                 
   });
-};
+}
 
 export async function down(knex: Knex) {
-  return knex.schema.dropTable('point_items');
-};
+  return knex.schema.dropTable("point_items");
+}

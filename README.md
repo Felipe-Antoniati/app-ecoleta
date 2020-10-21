@@ -1,198 +1,225 @@
-#  Ecoleta - Coleta Seletiva Solidária
+# Ecoleta
 
-<div align="center"> 
-	<img  src="./client/web/src/assets/images/logo.svg">
-</div>
-
+<h4 align="center"> 
+	<img src="./client/web/src/images/logo.svg" style="width: 100%"/>
+</h4>
+<br />
 <p align="center">
- <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-autor">Autor</a> • 
- <a href="#user-content--licença">Licença</a>
+ <a href="#-sobre-o-projeto">About</a> •
+ <a href="#-como-executar-o-projeto">How to run</a> • 
+ <a href="#-funcionalidades">Functionalities</a> •
+ <a href="#-tecnologias">Technologies</a> • 
+ <a href="#-autor">Author</a> • 
+ <a href="#user-content--licença">License</a>
 </p>
 
-##  Sobre o projeto
+## About the Project
 
-♻️ ECOLETA é um Aplicativo para cadastrar Pontos de **Coleta Seletiva Solidária** de resíduos orgânicos e inorgânicos; Esse cadastro é feito através do **APP Web**, e as pessoas podem buscar os pontos de coletas disponíveis através do **APP Mobile**.
+♻️ ECOLETA is an Application to register **Solidary Selective Collection Points** of organic and inorganic waste; This registration is done through **APP Web**, and people can search for the collection points available through **APP Mobile**.
 
-Este Projeto foi desenvolvido durante à **NLW 1** (Next Level Week 1) um evento oferecido pela [Rocketseat](https://blog.rocketseat.com.br/primeira-next-level-week/). À **NLW** é um curso intensivo online e gratuito, com muito código, desafios, networking e um único objetivo: te levar para o próximo nível.
-
-O conteúdo é exibido durante 1 semana, e em cada dia da semana, é apresentado uma etapa para o desenvolvimento do projeto, desde o **Back-end** com a construção de uma **API REST**, até o **Front-end Web** e **Front-end Mobile**, utilizando as melhores tecnologias do mercado.
-
-<div align="center">
-  <sub>Agradeço de 💜 à
-    <a href="https://github.com/diego3g">Diego Fernandez</a> e toda à equipe:
-    <a href="https://github.com/rocketseat">Rocketseat</a> :facepunch:    
+<details>
+  <summary>Click here for more informations</summary>
+  <br />
+  <section>
+    <div>
+     This Project was developed during the <b>Next Level Week 1 (NLW)</b> an event offered by <a href="https://blog.rocketseat.com.br/primeira-next-level-week/">RocketSeat</a>. <b>NLW</b> is a free and intensive online course, with lots of code, challenges, networking and a single objective: to take you to the next level.
+    </div>
+    <br />
+    <div>
+    The content is displayed during <b>1 week</b>, and on each day of the week, a stage for the development of the project is presented, from the <b>Back-end</b> to the <b>Front-end Web</b> and <b>Mobile</b>, using the technologies: NodeJS + ReactJS + React Native.
+    </div>  
+  </section>
+</details>
+<br />
+ <div align="center">
+  <sub>I sincerely thank:
+    <a href="https://github.com/diego3g">Diego Fernandez</a> and whole team:
+    <a href="https://github.com/rocketseat">Rocketseat</a>
   </sub>
 </div>
 
 ---
+## How to run the project
 
-## ⚙️ Funcionalidades
-
-- [x] As Entidades tem acesso ao **Aplicativo Web**, onde podem: 
-  - [x] Cadastrar-se na plataforma enviando:
-    - [x] Nome, Email e Whatsapp.
-    - [x] Cidade, Estado(UF).
-    - [x] Selecionando Ponto de Coleta específico no mapa.
-    - [x] Selecionando Ítens disponíveis para Coleta
-
-- [x] As pessoas tem acesso ao **Aplicativo Mobile**, onde podem:
-  - [x] Selecionar a Cidade e o Estado para encontrar Pontos de Coleta.
-  - [x] Entrar em contato com a Entidade que cadastrou o Ponto de Coleta.
-
----
-
-## 🚀 Como executar o projeto
-
-Este projeto é divido em três partes:
-1. Back-end (pasta server) 
-2. Front-end Web (pasta web)
-3. Front-end Mobile (pasta mobile)
-
-💡Tanto o Frontend quanto o Mobile precisam que o Backend esteja sendo executado para funcionar.
-
-### Pré-requisitos
-
-É necessário ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com) - [Node.js](https://nodejs.org/en/) - [NPM](https://www.npmjs.com/) || [YARN](https://yarnpkg.com/)
-
+<details>
+  <summary>This project is separated into three parts:</summary>
+  <section>
+    <div>
+    <h4>1 Back-end(server folder)</h4> 
+    <h4>2 Front-end Web (web folder)</h4>
+    <h4>3 Front-end Mobile (mobile folder)</h4>
+    <br />
+    <h2>Front-end Web and Mobile applications need the Backend to be running to work.</h2>
+    </div>
+  </section>
+</details>
 
 ```bash
 
-# Clone este repositório
+# Clone this repository
 $ git clone https://github.com/Felipe-Antoniati/app-ecoleta.git
 
 ```
 
-#### :minidisc: Iniciar o Servidor (API)
+#### Start Server
 
 ```bash
 
-# Acesse a pasta server do projeto no terminal/cmd
+# Access the project's server folder through the terminal/powershell
 $ cd app-ecoleta/server
 
-# Instale as dependências
-$ npm install
+# Install dependencies
+$ yarn install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev
+# Run the application in development mode
+$ yarn dev
 
 # O servidor inciará na porta:5000 - acesse http://localhost:5000
 
 ```
 
-#### 💻 Iniciar Aplicação Web
+#### Start Web Application
 
 ```bash
 
-# Vá para a pasta web da aplicação
+# Access the project's server folder through the terminal/powershell
 $ cd app-ecoleta/client/web
 
-# Instale as dependências
-$ npm install
+# Install dependencies
+$ yarn install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm start
+# Run the application in development mode
+$ yarn start
 
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+# The application will open at the door:3000 - acess http://localhost:3000
 
 ```
 
-#### 📱 Iniciar APlicação Mobile
+#### Start Mobile Application
 
-``` bash
-Para rodar o projeto mobile você precisa de um celular com o EXPO instalado, 
-ou um emulador android/ios.
+```bash
+To run the mobile project you need a cell phone with Expo installed
+or an android / ios emulator.
 
-# Vá para a pasta mobile da aplicação
+# Access the project's server folder through the terminal/powershell
 $ cd app-ecoleta/client/mobile
 
-# Instale as depedencias
-$ npm install
+# Install dependencies
+$ yarn install
 
-# Rode a aplicação
-$ npm start
+# Run the application in development mode
+$ yarn start
 
-> Depois leia o QRCode com o app do EXPO ou rode em um emulador.
+> Then read the QR Code with the Expo app or run on an emulator.
 
 ```
 
 ---
 
-## 🛠 Tecnologias
+## Functionalities
 
-As seguintes ferramentas foram usadas na construção do projeto:
+- [x] Entities have access to the **Web Application**, where they can:
 
-#### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
+  - [x] Register on the platform by sending:
+    - [x] Name, Email and Whatsapp.
+    - [x]  City, State (UF).
+    - [x]  Selecting specific Collection Point on the map.
+    - [x]  Selecting Items Available for Collection.
 
--   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
--   **[LeafletJS](https://leafletjs.com/)**
--   **[React Icons](https://react-icons.github.io/react-icons/)**
--   **[Axios](https://github.com/axios/axios)**
--   **[React DropZone](https://react-dropzone.js.org/)**
-
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json)
-
-#### **Server**  ([NodeJS](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Express](https://expressjs.com/)**
--   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
--   **[KnexJS](http://knexjs.org/)**
--   **[SQLite3](https://github.com/mapbox/node-sqlite3)**
--   **[ts-node](https://github.com/TypeStrong/ts-node)**
--   **[Celebrate](https://github.com/arb/celebrate)**
--   **[Multer](https://github.com/expressjs/multer)**
-
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json)
-
-#### **Mobile**  ([React Native](http://www.reactnative.com/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Expo](https://expo.io/)**
--   **[Expo Google Fonts](https://github.com/expo/google-fonts)**
--   **[Expo Mail Composer](https://docs.expo.io/versions/latest/sdk/mail-composer/)**
--   **[React Navigation](https://reactnavigation.org/)**
--   **[React Native Maps](https://github.com/react-native-community/react-native-maps)**
--   **[Axios](https://github.com/axios/axios)**
-
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/mobile/package.json)
-
-
-
-##  💪 Como contribuir para o projeto
-
-1. Faça um **fork** deste projeto.
-2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
-3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
-4. Envie as suas alterações: `git push origin my-feature`
-> Em caso de dúvidas, confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
+- [x] People have access to the **Mobile Application**, where they can:
+  - [x] Select the City and State to find Collection Points.
+  - [x] Contact the Entity that registered the Collection Point.
 
 ---
 
-## 👨‍💻 Dev,s que trabalharam neste Repositório
+## Technologies
+
+**These are the tools used in the construction of the project:**
+
+<details>
+  <summary><b>Server - <a href="https://nodejs.org/en/">NodeJS</a> + <a href="https://www.typescriptlang.org/">Typescript</a></b></summary>
+  <section>
+    <div style="display: flex; flex-direction: column">
+      <a href="https://expressjs.com/">Express</a><br />
+      <a href="https://expressjs.com/en/resources/middleware/cors.html">Cors</a><br />
+      <a href="http://knexjs.org/">KnexJS</a><br />
+      <a href="https://github.com/mapbox/node-sqlite3">SQLite</a><br />
+      <a href="https://github.com/TypeStrong/ts-node">ts-node</a><br />
+      <a href="https://github.com/arb/celebrate">Celebrate</a><br />
+      <a href="https://github.com/expressjs/multer">Multer</a><br />
+      <br />
+      <sub>
+        <h1> See the package.json file for more information.</h1>      
+      </sub>
+    </div>
+  </section>
+</details>
+<details>
+  <summary><b>Web - <a href="https://reactjs.org">React</a> + <a href="https://www.typescriptlang.org/">Typescript</a></b></summary>
+  <section>
+    <div style="display: flex; flex-direction: column">
+      <a href="https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom">React Router Dom</a><br />
+      <a href="https://react-icons.github.io/react-icons/">React Icons</a><br />
+      <a href="https://react-leaflet.js.org/en/">Leaflet Js</a><br />
+      <a href="https://react-leaflet.js.org/">React Leaflet</a><br />
+      <a href="https://react-dropzone.js.org/">React DropZone</a><br />
+      <a href="https://github.com/axios/axios">Axios</a>
+      <br />
+      <sub>
+        <p> See the package.json file for more information.</p>      
+      </sub>
+    </div>
+  </section>
+</details>
+<details>
+  <summary><b>Mobile - <a href="http://www.reactnative.com/">React Native</a> + <a href="https://www.typescriptlang.org/">Typescript</a></b></summary>
+  <section>
+    <div style="display: flex; flex-direction: column">
+      <a href="https://expo.io/">Expo</a><br />
+      <a href="https://docs.expo.io/versions/latest/sdk/constants/">Expo Google Fonts</a><br />
+      <a href="https://docs.expo.io/versions/latest/sdk/mail-composer/">Expo Mail Composer</a><br />
+      <a href="https://reactnavigation.org/">React Navigation</a><br />
+      <a href="https://github.com/react-native-community/react-native-maps">React Native Maps</a><br />
+      <a href="https://github.com/axios/axios">Axios</a><br />
+      <br />
+      <sub>
+        <p> See the package.json file for more information.</p>      
+      </sub>
+    </div>
+  </section>
+</details>
+
+## How to contribute to the project
+
+1. **Fork** this project.
+2. Create a new branch with your changes: `git checkout -b my-feature`
+3. Save your changes and create a commit message telling you what you did: `git commit -m" feature: My new feature "`
+4. Submit your changes: `git push origin my-feature`
+   > If in doubt, check out this [how to contribute to GitHub] (./ CONTRIBUTING.md)
+
+---
+
+## Dev, s who worked on this Repository
 
 <a href="https://github.com/felipe-antoniati">
- <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/63480609?s=460&u=c69fe399d6e97159b75b64b597b007ff8e6ac553&v=4" width="100px;" alt="Fullstack Programmer"/>
+ <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/63480609?s=460&u=c69fe399d6e97159b75b64b597b007ff8e6ac553&v=4" width="100px;" alt="Fullstack Developer"/>
  <br />
- <sub><b>Felipe Antoniati</b></sub></a> <a href="https://github.com/felipe-antoniati" title="Fullstack Programmer">🚀</a>
+ <sub><b>Felipe Antoniati</b></sub></a> <a href="https://github.com/felipe-antoniati" title="Fullstack Developer">🚀</a>
  <br /><br />
 
-[![Twitter Badge](https://img.shields.io/badge/-@felipe-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/)](https://twitter.com/) [![Linkedin Badge](https://img.shields.io/badge/-Felipe-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/)](https://www.linkedin.com/in/felipe-antoniati-1288041b7/) 
+ [![Linkedin Badge](https://img.shields.io/badge/-Felipe-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/)](https://www.linkedin.com/in/felipe-antoniati-1288041b7/)<br />c
 [![Gmail Badge](https://img.shields.io/badge/-antoniati.felipe@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:antoniati.felipe@gmail.com)](mailto:antoniati.felipe@gmail.com)
 
 ---
 
-## 📝 Licença
+## License
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+This project is under license [MIT](./LICENSE).
 
 ---
 
-##  Versões do README
+## README versions
 
-[Português 🇧🇷](./README.md)  
+[English-EUA 🇺🇸](./README.md) | [Portuguese-BR 🇧🇷](./README-ptBR.md)
 
-
-De uma ⭐️ neste Projeto, para liberar a dopamina!
+From a ⭐️ in this Project, to release dopamine!
